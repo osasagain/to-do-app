@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #333;
+  color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  text-align: center;
+  width: 510px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.bgTask{
+  background-color: #555;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
+}
+
+.bgTask div{
+  display: flex;
+  align-items: center;
+}
+
+.taskNumber{
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 50px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgTask .done .taskText{
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+ 
+.iconWrapper{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+
+.bgTask .iconWrapper span{
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+  color: greenyellow;
+  margin-left: 20px;
+}
+
+.bgTask .iconWrapper span:hover{
+  color: aquamarine;
+}
+
+.row-addTask{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.form-addTask{
+  height: 30px;
+  width: 400px;
+  border-right: none;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+  background: #e0e0e0;
+  box-shadow:  28px 28px 55px #868686,
+             -28px -28px 55px #ffffff;
+  
+}
+
+.btn-addTask{
+  height:45px;
+  width: 100px;
+  border-left: none;
+  border-radius: 0px 5px 5px 0px;
+  margin-top:-3px;
 }
