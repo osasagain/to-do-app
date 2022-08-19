@@ -7,9 +7,9 @@ import './App.css';
 function App() {
   //main  todo state
   const [toDo, setToDo] = useState([{
-    id : 1, 
-    title: "Task 1", 
-    status : false
+    id : "", 
+    title: "", 
+    status : "false"
   },
   ]);
 
@@ -46,13 +46,20 @@ function App() {
     setToDo(newTask);
   }
 
- 
+
+  const keyEnter = event => {
+    if (event.key === ('Enter')) {
+      event.preventDefault()
+    }
+  }
   
   return (
     <div className=" container App">
 
       <br></br>
-      <h2>todo list App (Reactjs)</h2>
+      <h2>OSAS TODO APP</h2>
+
+      <p>Plan your day</p>
       <br></br>
    
     {/* Add Task */}
@@ -61,12 +68,13 @@ function App() {
         <input 
         value={newTask}
         onChange = {(e)=>setNewTask(e.target.value)}
-        className='form-addTask'/>
+        className='input-addTask' placeholder='Add to do'/>
       </div>  
       <div className='col-auto'>
         <button 
         onClick={addTask}
-        className='btn-addTask'>Add Task  
+        className='btn-addTask' 
+        oncKeyPress={keyEnter}> Add Task  
         </button>
       </div>
     </div>
