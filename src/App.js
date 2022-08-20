@@ -1,17 +1,12 @@
 import React, {useState}  from 'react';
-// import "bootstrap/dist/css/bootstrap.min.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCircleCheck, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function App() {
   //main  todo state
-  const [toDo, setToDo] = useState([{
-    id : "", 
-    title: "", 
-    status : "false"
-  },
-  ]);
+  const [toDo, setToDo] = useState([],
+  );
 
   // temporary state
 
@@ -45,14 +40,7 @@ function App() {
     })
     setToDo(newTask);
   }
-
-
-  const keyEnter = event => {
-    if (event.key === ('Enter')) {
-      event.preventDefault()
-    }
-  }
-  
+ 
   return (
     <div className=" container App">
 
@@ -73,8 +61,7 @@ function App() {
       <div className='col-auto'>
         <button 
         onClick={addTask}
-        className='btn-addTask' 
-        oncKeyPress={keyEnter}> Add Task  
+        className='btn-addTask'> Add Task  
         </button>
       </div>
     </div>
